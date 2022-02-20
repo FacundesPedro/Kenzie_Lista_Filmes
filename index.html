@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <title>Lista de Filmes Kenzie</title>
+</head>
+<body>
+    <header class="flex header">
+        <div class="flex logo-container">
+                <img src="/assets/imgs/logo.png" alt="Logo da Kenzie">          
+                <h2 class="logo-name">NETFLIX DA CHINA</h2>
+        </div>
+        <div class="navbar-container">  
+            <nav class="navbar">
+                <ul class="flex">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Mais</a></li>
+                </ul>
+            </nav>
+        </div>  
+    </header>
+    <div class="box-search-container">
+        <div class="search-container">
+            <input type="text" name="search_item" id="search_field" placeholder="Pesquisar">
+        </div>
+    </div>
+    <div class="movies-container">
+        <ul class="movies-list flex">
+
+        </ul>
+    </div>
+    <script defer src="./assets/database.js"></script>
+    <script defer src="./js/index.js"></script>
+</body>
+</html>

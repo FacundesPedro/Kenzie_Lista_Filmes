@@ -1,0 +1,105 @@
+:root{
+    --primary-color:#353839;
+    --secondary-color:#808080;
+    --another-than-Grey:#385f8f;
+}
+*{ 
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--secondary-color);
+    padding-top: 100px;
+}
+.flex{
+    display: flex;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background: var(--primary-color);
+    color: #FFF;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+.logo-container{
+    align-items: center;
+    margin-left: 15%;
+    cursor: pointer;
+}
+.logo-container img{
+    height:10%;
+    min-height: 30px;
+    width: 10%;
+    min-width: 30px;
+    margin-right: 15px;
+}
+.logo-container h2{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.navbar-container{
+    margin-right: 10%;
+    
+}
+/*.navbar-container .navbar{}*/
+.navbar-container .navbar ul li{
+    margin-left:15px;
+}
+.navbar-container .navbar ul li a{
+    color: #FFF;
+    font-weight: 400;
+}
+.box-search-container{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 20%;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+.box-search-container .search-container{
+    height: 15%;
+    min-height: 120px;
+    width: 30%;
+    min-width: 200px;
+    display: grid;
+    place-items: center;
+}
+.box-search-container .search-container input{
+    background: rgba(255, 255, 255, 0.1);
+    width: 90%;
+    height: 60%;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 28px;
+    border: none;
+}
+
+.movies-container{
+    background: var(--another-than-Grey);
+}
+.movies-container ul{
+    width: 90%;
+    min-width: 450px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.movies-container ul li{
+    margin: 20px;
+    max-width: 150px;
+    max-height: 300px;
+}
