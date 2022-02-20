@@ -20,6 +20,9 @@ body{
 .flex{
     display: flex;
 }
+.grid{
+    display: grid;
+}
 .header{
     width: 100%;
     height: 100px;
@@ -32,14 +35,15 @@ body{
     top: 0;
 }
 .logo-container{
+    width: 30%;
     align-items: center;
     margin-left: 15%;
     cursor: pointer;
 }
 .logo-container img{
-    height:10%;
+    height:15%;
     min-height: 30px;
-    width: 10%;
+    width: 15%;
     min-width: 30px;
     margin-right: 15px;
 }
@@ -48,19 +52,41 @@ body{
     font-weight: 600;
 }
 .navbar-container{
-    margin-right: 10%;
-    
+    margin-right: 5%;
+    width: 30%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
 }
-/*.navbar-container .navbar{}*/
+.navbar-container .navbar{
+    width: 100%;
+}
+.navbar-container .navbar ul{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .navbar-container .navbar ul li{
-    margin-left:15px;
+    margin-left:20px;
+    width: 100%;
+    height: 100%;
+    background: var(--another-than-Grey);
+    place-items: center;
+    border-radius: 30px;
 }
 .navbar-container .navbar ul li a{
+    color: #000;
+    font-weight: 400;
+    transition: 0.5ms;
+}
+.navbar-container .navbar ul li a:hover{
     color: #FFF;
     font-weight: 400;
+    
 }
 .box-search-container{
-    display: grid;
+    
     place-items: center;
     width: 100%;
     height: 20%;
@@ -91,15 +117,31 @@ body{
     background: var(--another-than-Grey);
 }
 .movies-container ul{
-    width: 90%;
-    min-width: 450px;
     padding: 20px;
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .movies-container ul li{
-    margin: 20px;
-    max-width: 150px;
-    max-height: 300px;
+    background: var(--primary-color);
+    margin: 10px 20px;
+    padding: 10px;
+    width: 20%;
+}
+.movies-container ul li:hover{
+    box-shadow: inset 0 0 1em white, 0 0 1em black;
+}
+.movies-container ul li div{
+    overflow: hidden;
+}
+.movies-container ul li div img{
+    width: 100%;
+    height: 70%;
+}
+.movies-container ul li div h3{
+    margin: 10px 0;
+    text-align: center;
 }

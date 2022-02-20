@@ -5,6 +5,7 @@ document.querySelector("#search_field").addEventListener("focusin",event =>{
 document.querySelector("#search_field").addEventListener("focusout",event =>{
     event.target.style.background = 'transparent'
 })
+
 function load_DOM_movies(){
     const movieDOMList = create_DOM_movies_element()
     const moviesList = document.querySelector('.movies-list')
@@ -16,12 +17,15 @@ function load_DOM_movies(){
 function create_DOM_movies_element(){
     const buffer = []
     movie_data.map(e =>{
+        const movieContainer = document.createElement('div')
+        movieContainer.id = `div_id_${e.id}`
         const movieItem = document.createElement('li')
         const img = document.createElement('img')
         const h3 = document.createElement('h3')
         h3.innerHTML = e.nome 
         img.src = `./assets/imgs/image (${e.id}).png`
-        movieItem.append(img,h3)
+        movieContainer.append(img,h3)
+        movieItem.append(movieContainer)
         buffer.push(movieItem)
     })
     return buffer
